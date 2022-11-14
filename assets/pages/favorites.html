@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8f47e19bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/favorites.css">
+    <link rel="icon" type="image/png" href="../imgs/iconPage.png"/>
+    <link rel="shortcut icon" href="../imgs/iconPage.png" type="image/x-icon">
+    <title>Favorites - Reci.Pie</title>
+</head>
+<body onload="favoriteList()">
+    <section id="background">
+        <header id="header" class="wrapper flex">
+            <a href="/recipie/index.html" id="logo">Reci.Pie</a>
+            <nav>
+                <ul class="flex">
+                    <li><a href="/recipie/index.html">HOME</a></li>
+                    <li><a href="favorites.html">MY FAVORITES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-favorites" class="wrapper">
+            <section id="favorite-content" class="flex">
+                <h1>FAVORITES RECIPES - <span id="favorites-length">0</span></h1>
+                <h2 id="zeroFavorites">You don't have any favorites... check out our recipes <a href="/recipie/index.html">here</a>!</h2>
+                <div id="favorites"></div>
+                <button type="button" id="btn-clear" onclick="clearAllFavorites()">Clear All</button>
+            </section>
+        </main>
+    </section>
+    <script src="/recipie/script.js"></script>
+</body>
+</html>

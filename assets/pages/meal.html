@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8f47e19bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/meal.css">
+    <link rel="icon" type="image/png" href="../imgs/iconPage.png"/>
+    <link rel="shortcut icon" href="../imgs/iconPage.png" type="image/x-icon">
+    <title>Meal - Reci.Pie</title>
+</head>
+<body onload="mealSpecificApi()">
+    <section id="background">
+        <header id="header" class="wrapper flex">
+            <a href="/recipie/index.html" id="logo">Reci.Pie</a>
+            <nav>
+                <ul class="flex">
+                    <li><a href="/recipie/index.html">HOME</a></li>
+                    <li><a href="favorites.html">MY FAVORITES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="wrapper">
+            <section id="meal-content">
+                <button onclick="history.back()"  id="anchor-back"><i class="fa-solid fa-arrow-left"></i> Go back</button>
+                <header id="meal-content-header">
+                    <img src="" id="meal-image-header" onerror="this.onerror=null; this.src='../imgs/pattern.svg'">
+                    <div id="meal-content-header-information">
+                        <div id="meal-content-header-information-title-btns">
+                            <button type="button" id="btn-random" class="btn-meal-header" onclick="getRandomMeal()"><i class="fa-solid fa-arrows-rotate" title="See another meal"></i></button>
+                            <h1 id="meal-title"></h1>
+                            <input type="checkbox" id="btn-favorite" value="" class="btn-meal-header hidden" onclick="favoriteMeal()"></button>
+                            <label for="btn-favorite" id="labelFavorite"><i class="fa-solid fa-heart"></i></label>
+                        </div>
+                        <div id="meal-content-header-information-category-area" class="flex">
+                            <p id="meal-category"></p>
+                            <p id="meal-area"></p>
+                        </div>
+                    </div>
+                </header>
+                <section id="meal-content-information">
+                    <article id="meal-content-information-instructions">
+                        <header id="meal-content-information-instructions-header">
+                            <h2>INSTRUCTIONS</h2>
+                        </header>
+                        <div id="meal-content-information-instructions-meal">
+                            <p id="instructions-meal"></p>
+                        </div>
+                    </article>
+                    <article id="meal-content-information-ingredients">
+                        <header id="meal-content-information-ingredients-header">
+                            <h2>INGREDIENTS</h2>
+                        </header>
+                        <div id="meal-content-information-ingredients-meal">
+                            <ul id="meal-ingredients-ul"></ul>
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </main>
+        <div id="myModal" class="modal">
+            <div id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="load" style="width:0%"></div>
+            <div class="modal-content">
+              <p id="modal-text">Added to your favorites!</p>
+            </div>
+        </div>
+    </section>
+    <script src="/recipie/script.js"></script>
+</body>
+</html>

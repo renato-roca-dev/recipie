@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8f47e19bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/png" href="assets/imgs/iconPage.png"/>
+    <link rel="shortcut icon" href="assets/imgs/iconPage.png" type="image/x-icon">
+    <title>Home - Reci.Pie</title>
+</head>
+<body>
+    <section id="background">
+        <header id="header" class="wrapper flex">
+            <a href="index.html" id="logo">Reci.Pie</a>
+            <nav>
+                <ul class="flex">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="assets/pages/favorites.html">MY FAVORITES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="introduction">
+            <div id="introduction-content" class="wrapper flex">
+                <h1>Discover new dishes and how to make them</h1>
+                <p>Dishes of different flavors and recipes</p>
+                <a id="btn-show-random" onclick="getRandomMeal()">See random dish!</a>
+            </div>
+        </section>
+    </section>
+    <main class="wrapper">
+        <header id="main-meals-header" class="flex">
+            <div id="main-meals-header-categories">
+                <label for="0">Random
+                    <input id="0" type="radio" name="categories" class="hidden" value="" checked onchange="apiReqs()">
+                </label>
+            </div>
+            <div id="main-meals-header-search">
+                <form id="form-search">
+                    <div id="form-input">
+                        <label for="input-food-search"><i class="fa-solid fa-magnifying-glass"></i></label><input type="text" name="search" id="input-food-search" placeholder="Search recipes here..." autocomplete="off" spellcheck="false" onkeyup="apiReqs()">
+                    </div>
+                    <button type="submit" id="btn-clear" onclick="clearSearch(event)">Clear</button>
+                </form>
+            </div>
+        </header>
+        <section id="main-meals-section" class="flex">
+            <div id="main-meals-display" class="flex"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
